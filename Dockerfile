@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.13
+FROM ubuntu:14.04
 
 MAINTAINER Minku Lee <minku@sha.kr>
 
