@@ -1,7 +1,7 @@
-rails-docker
+docker-rails
 ============
 
-**rails-docker** is a minimal docker image suitable for Ruby on Rails application deployment. While the size of [offical Rails image](https://registry.hub.docker.com/_/rails/) is ~950MB, this image uses ~560MB. 
+**docker-rails** is a minimal docker image suitable for Ruby on Rails application deployment. While the size of [offical Rails image](https://registry.hub.docker.com/_/rails/) is ~950MB, this image uses ~560MB. 
 
 
 ## Example Dockerfile
