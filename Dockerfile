@@ -18,7 +18,7 @@ RUN dpkg-reconfigure locales && \
 ENV LC_ALL C.UTF-8
 
 # Build & install ruby
-RUN mkdir /tmp/ruby && curl http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz | tar xzf - --strip=1 -C /tmp/ruby && \
+RUN mkdir /tmp/ruby && curl http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.gz | tar xzf - --strip=1 -C /tmp/ruby && \
   	cd /tmp/ruby && \
   	autoconf && \
   	./configure && \
