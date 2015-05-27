@@ -1,15 +1,12 @@
-FROM debian:wheezy
+FROM debian:jessie
 
 MAINTAINER Minku Lee <minku@sha.kr>
-
-# Enable backports
-RUN echo "deb http://http.debian.net/debian wheezy-backports main" >> /etc/apt/sources.list
 
 # Install dependencies packages
 RUN apt-get update && apt-get install -y \
   autoconf bison build-essential locales libssl-dev libyaml-dev \
-  libreadline6-dev  zlib1g-dev libncurses5-dev libpq-dev \
-  subversion imagemagick curl git && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+  libreadline6-dev zlib1g-dev libncurses5-dev libpq-dev \
+  imagemagick curl git && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN dpkg-reconfigure locales && \
     locale-gen C.UTF-8 && \
