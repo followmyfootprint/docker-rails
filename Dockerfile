@@ -18,7 +18,7 @@ ENV LC_ALL C.UTF-8
 RUN mkdir /tmp/ruby && curl http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.gz | tar xzf - --strip=1 -C /tmp/ruby && \
   	cd /tmp/ruby && \
   	autoconf && \
-  	./configure && \
+  	./configure --disable-install-doc && \
   	make -j$(nproc) && \
   	make install && \
   	rm -rf /tmp/ruby
