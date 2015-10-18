@@ -3,7 +3,7 @@ FROM debian:jessie
 MAINTAINER Minku Lee <minku@sha.kr>
 
 # Install dependencies packages
-RUN apt-get update && apt-get install -y \
+RUN apt-get clean && apt-get update && apt-get install -y \
   autoconf bison build-essential locales libssl-dev libyaml-dev libmagickwand-dev \
   libreadline6-dev zlib1g-dev libncurses5-dev libpq-dev libmagic-dev \
   imagemagick curl git && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
